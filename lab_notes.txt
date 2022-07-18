@@ -1,0 +1,9 @@
+
+# CREATE CLUSTER
+kind create cluster --config kind-multi-node.yaml
+
+# EXPORT KUBECONFIG
+export KUBECONFIG="$(kind get kubeconfig --name="kind")"
+
+# GET NODES
+kubectl get nodes --kubeconfig="/home/vagrant/.kube/config"
