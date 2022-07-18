@@ -7,3 +7,7 @@ export KUBECONFIG="$(kind get kubeconfig --name="kind")"
 
 # GET NODES
 kubectl get nodes --kubeconfig="/home/vagrant/.kube/config"
+
+# APPLY CHANGES
+kubectl apply -f fluentd-daemonset.yaml --kubeconfig="/home/vagrant/.kube/config"
+
